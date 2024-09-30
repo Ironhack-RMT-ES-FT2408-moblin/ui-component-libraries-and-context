@@ -4,6 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
+
+// agregando un button de bootstrap, YAY!
 
 function MyNavbar() {
   return (
@@ -19,7 +22,7 @@ function MyNavbar() {
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/book/list">Book List</Nav.Link>
             <Nav.Link as={Link} to="/book/add">Add a Book</Nav.Link>
-            <button>☀️/🌑</button>
+            <Button>☀️/🌑</Button>
           </Nav>
         </Navbar.Collapse>
 
