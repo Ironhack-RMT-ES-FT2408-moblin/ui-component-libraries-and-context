@@ -14,3 +14,25 @@
 /* .add-form {
   margin: 40px;
 } */
+
+.light-theme {
+  background-color: rgb(227, 227, 227);
+  color: black;
+  min-height: 100vh;
+}
+
+.dark-theme {
+  background-color: rgb(28, 28, 28);
+  color: white;
+  min-height: 100vh;
+}
+
+.light-theme-btn {
+  background-color: auto;
+  border-color: auto;
+}
+
+.dark-theme-btn {
+  background-color: orange !important;
+  border-color: orange !important;
+}

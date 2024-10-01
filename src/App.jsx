@@ -8,17 +8,21 @@ import About from './pages/About'
 import BookList from './pages/books/BookList'
 import BookDetails from './pages/books/BookDetails'
 import BookAddForm from './pages/books/BookAddForm'
+import { useContext } from 'react'
+import { ThemeContext } from './context/theme.context'
 
 function App() {
 
+  const { isDarkTheme } = useContext(ThemeContext)
+
   return (
-    <>
+    <div className={isDarkTheme ? "dark-theme" : "light-theme" }>
 
       <Navbar />
      
       <Routes>
 
-        <Route path="/" element={ <Home />}/>
+        <Route path="/" element={ <Home/>}/>
         <Route path="/contact" element={ <Contact /> } />
         <Route path="/about" element={ <About /> } />
         <Route path="/book/list" element={ <BookList /> } />
@@ -27,7 +31,7 @@ function App() {
 
       </Routes>
 
-    </>
+    </div>
   )
 }
 

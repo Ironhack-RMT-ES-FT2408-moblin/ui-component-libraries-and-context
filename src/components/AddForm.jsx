@@ -1,9 +1,14 @@
+import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { ThemeContext } from '../context/theme.context';
 
 function AddForm() {
+
+  const { isDarkTheme } = useContext(ThemeContext)
+
   return (
-    <Form className='m-3' >
+    <Form className='m-3' data-bs-theme={isDarkTheme ? "dark" : "light"}>
       
       <Form.Group>
         <Form.Label htmlFor="title">Title</Form.Label>
@@ -20,7 +25,7 @@ function AddForm() {
         <Form.Control type="text" name="content"/>
       </Form.Group>
 
-      <Button variant="warning" className='mt-3'>Add new Book</Button>
+      <Button className={`mt-3 ${isDarkTheme ? "dark-theme-btn" : "light-theme-btn"}`}>Add new Book</Button>
 
     </Form>
   )
